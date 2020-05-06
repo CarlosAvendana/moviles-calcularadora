@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
+<ScrollView
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+<GridLayout
+
     android:id="@+id/GridLayout1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -13,156 +18,214 @@
 
     <TextView
         android:layout_width="390dp"
+        android:layout_height="86dp"
         android:layout_columnSpan="4"
-        android:layout_gravity="fill"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="#FFCCCC"
+        android:background="#78B6F2"
+        android:paddingTop="1dp"
+        android:paddingRight="10dp"
         android:text="0"
-        android:textSize="50sp" />
+        android:textAlignment="textEnd"
+        android:textSize="75sp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="101dp"
-        android:text="/" />
+        android:layout_height="73dp"
+        android:backgroundTint="#EEAA47"
+        android:text="/"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="105dp"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="fill"
-        android:text="*" />
+        android:backgroundTint="#EEAA47"
+        android:text="*"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="101dp"
-        android:text="C" />
+        android:layout_height="72dp"
+        android:backgroundTint="#EEAA47"
+        android:text="C"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
-        android:text="DEL" />
+        android:layout_height="71dp"
+        android:backgroundTint="#EEAA47"
+        android:text="DEL"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="101dp"
+        android:textSize="30dp"
         android:text="7"/>
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="101dp"
+        android:layout_width="103dp"
+        android:textSize="30dp"
         android:text="8" />
     <Button
         android:id="@+id/button7"
         android:layout_width="102dp"
+        android:textSize="30dp"
         android:text="9" />
+
     <Button
         android:id="@+id/button8"
-        android:text="+" />
+        android:layout_width="wrap_content"
+        android:backgroundTint="#EEAA47"
+        android:text="+"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="101dp"
+        android:textSize="30dp"
         android:text="4" />
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="100dp"
+        android:layout_width="102dp"
+        android:textSize="30dp"
         android:text="5" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="104dp"
+        android:textSize="30dp"
         android:text="6" />
     <Button
         android:id="@+id/button12"
+        android:textSize="30dp"
+        android:backgroundTint="#EEAA47"
         android:text="-" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="98dp"
+        android:textSize="30dp"
         android:text="1" />
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="100dp"
+        android:layout_width="104dp"
+        android:textSize="30dp"
         android:text="2" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="101dp"
+        android:textSize="30dp"
         android:text="3" />
     <Button
         android:id="@+id/button16"
+        android:textSize="30dp"
+        android:backgroundTint="#EEAA47"
         android:text="√" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="99dp"
+        android:textSize="30dp"
         android:text="0" />
 
     <Button
         android:id="@+id/button18"
-        android:layout_width="100dp"
+        android:layout_width="101dp"
+        android:textSize="30dp"
         android:text="." />
 
     <Button
         android:id="@+id/button19"
         android:layout_width="99dp"
+        android:textSize="30dp"
         android:text="()" />
 
     <Button
         android:id="@+id/button20"
+        android:textSize="30dp"
+        android:backgroundTint="#EEAA47"
         android:text="%" />
 
     <Button
         android:id="@+id/button21"
         android:layout_width="102dp"
+        android:textSize="30dp"
+        android:backgroundTint="#A8A8A8"
         android:text="SIN" />
 
     <Button
         android:id="@+id/button22"
         android:layout_width="102dp"
-        android:text="COS" />
+        android:textSize="30dp"
+        android:text="COS"
+        android:backgroundTint="#A8A8A8"/>
 
     <Button
         android:id="@+id/button23"
         android:layout_width="100dp"
-        android:text="TAN" />
+        android:backgroundTint="#A8A8A8"
+        android:text="TAN"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button24"
-        android:layout_height="142dp"
+        android:layout_height="180dp"
         android:layout_rowSpan="3"
-        android:text="=" />
+        android:backgroundTint="#EEAA47"
+        android:text="="
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button25"
-        android:layout_width="98dp"
-        android:text="CSC" />
+        android:layout_width="102dp"
+        android:backgroundTint="#A8A8A8"
+        android:text="CSC"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/button26"
         android:layout_width="100dp"
+        android:backgroundTint="#A8A8A8"
+        android:textSize="30dp"
         android:text="SEC" />
 
     <Button
         android:id="@+id/button27"
         android:layout_width="101dp"
+        android:backgroundTint="#A8A8A8"
+        android:textSize="30dp"
         android:text="CTG" />
 
     <Button
         android:id="@+id/button28"
         android:layout_width="102dp"
+        android:textSize="30dp"
+        android:backgroundTint="#A8A8A8"
         android:text="OFF" />
 
     <Button
         android:id="@+id/button29"
         android:layout_width="100dp"
+        android:textSize="30dp"
+        android:backgroundTint="#A8A8A8"
         android:text="X!" />
 
     <Button
         android:id="@+id/button30"
         android:layout_width="101dp"
+        android:textSize="30dp"
+        android:backgroundTint="#A8A8A8"
         android:text="X^" />
 
 </GridLayout>
+</ScrollView>
