@@ -75,4 +75,62 @@ class Modelo {
     public String btn7(String num){return num+"7";}
     public String btn8(String num){return num+"8";}
     public String btn9(String num){return num+"9";}
+
+    public String evalua(double num, double num2, String ope) {
+        String valor = "";
+        switch (ope) {
+            case "/":
+                valor= Double.toString(division(num, num2));
+            break;
+            case "*":
+
+                valor= Double.toString(multiplicacion(num, num2));
+            break;
+            case "+":
+
+                valor= Double.toString(suma(num, num2));
+            break;
+            case "-":
+
+                valor= Double.toString(resta(num, num2));
+            break;
+            case "√":
+
+                valor=Double.toString(raiz(num));
+            break;
+            case "%":
+
+                valor= Double.toString(porcentaje(num, num2));
+            break;
+            case "sin":
+
+                valor=Double.toString(sin(num));
+            break;
+            case "cos":
+                valor=Double.toString(cos(num));
+            break;
+            case "tan":
+                valor= Double.toString(tan(num));
+            break;
+            case "csc":
+                valor=Double.toString(csc(num));
+            break;
+            case "sec":
+                valor= Double.toString(sec(num));
+            break;
+            case "ctg":
+                valor= Double.toString(ctg(num));
+            break;
+            case "factorial":
+                valor= Double.toString(factorial(num));
+            break;
+            case "pow":
+                valor= Double.toString(elevado(num, num2));
+            break;
+
+        }
+        return valor;
+    }
+
+
 }

@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Modelo m = new Modelo();
     public TextView result;
     String op;
+    String operacion;
     Double op1,op2;
 
     @Override
@@ -127,13 +128,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.slash:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " / ";
-                result.setText(op);
+                operacion = "/";
+                result.setText("");
                 break;
             case R.id.btn_multiply:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " * ";
-                result.setText(op);
+                operacion = "*";
+                result.setText("");
                 break;
             case R.id.btn_clear:
                 op1 = 0.0;
@@ -147,63 +148,71 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_plus:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " + ";
-                result.setText(op);
+                operacion = "+";
+                result.setText("");
                 break;
             case R.id.btn_less:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " - ";
-                result.setText(op);
+                operacion = "-";
+                result.setText("");
                 break;
             case R.id.btn_sqrt:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = " √ " + result.getText().toString();
+                operacion = "√";
+                op = " √( " + result.getText().toString() + " ) ";
                 result.setText(op);
                 break;
             case R.id.btn_percentage:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " % ";
-                result.setText(op);
+                operacion = "%";
+                result.setText("");
                 break;
             case R.id.btn_sin:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " Sin( " + result.getText().toString() + " ) ";
+                operacion = "sin";
                 result.setText(op);
                 break;
             case R.id.btn_cos:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " COS( " + result.getText().toString() + " ) ";
+                operacion = "cos";
                 result.setText(op);
                 break;
             case R.id.btn_tan:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " TAN( " + result.getText().toString() + " ) ";
+                operacion = "tan";
                 result.setText(op);
                 break;
             case R.id.btn_csc:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " CSC( " + result.getText().toString() + " ) ";
+                operacion = "csc";
                 result.setText(op);
                 break;
             case R.id.btn_sec:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " SEC( " + result.getText().toString() + " ) ";
+                operacion = "sec";
                 result.setText(op);
                 break;
             case R.id.btn_ctg:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " CTG( " + result.getText().toString() + " ) ";
+                operacion = "ctg";
                 result.setText(op);
                 break;
             case R.id.btn_fact:
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " Factorial( " + result.getText().toString() + " ) ";
+                operacion = "factorial";
                 result.setText(op);
                 break;
             case R.id.btn_raised:
                 op1 = Double.parseDouble(result.getText().toString());
-                op = result.getText().toString() + " ^ ";
-                result.setText(op);
+                operacion = "pow";
+                result.setText("");
                 break;
             case R.id.btn_off:
                 finish();
@@ -217,6 +226,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 op1 = Double.parseDouble(result.getText().toString());
                 op = "(" + result.getText().toString() + ")";
                 result.setText(op);
+                break;
+
+            case R.id.btn_equals:
+                String pantalla2 = result.getText().toString();
+                if (pantalla2.equals("")) {
+                    op2 = 0.0;
+                    result.setText(m.evalua(op1, op2, operacion));
+                }else{
+                    op2 = Double.parseDouble(result.getText().toString());
+                    result.setText(m.evalua(op1, op2, operacion));
+                }
+
                 break;
         }
     }
