@@ -1,20 +1,19 @@
 package com.example.calculadoracientifica;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
-    Modelo m=new Modelo();
+    Modelo m = new Modelo();
     public TextView result;
     String op;
     Double op1,op2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,6 +124,99 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn9:
                 op=result.getText().toString();
                 result.setText(m.btn9(op));
+                break;
+            case R.id.slash:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " / ";
+                result.setText(op);
+                break;
+            case R.id.btn_multiply:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " * ";
+                result.setText(op);
+                break;
+            case R.id.btn_clear:
+                op1 = 0.0;
+                result.setText("");
+                break;
+            case R.id.btn_delete:
+                if (!result.getText().equals("")) {
+                    op = result.getText().toString();
+                    result.setText(op.substring(0, op.length() - 1));
+                }
+                break;
+            case R.id.btn_plus:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " + ";
+                result.setText(op);
+                break;
+            case R.id.btn_less:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " - ";
+                result.setText(op);
+                break;
+            case R.id.btn_sqrt:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " √ " + result.getText().toString();
+                result.setText(op);
+                break;
+            case R.id.btn_percentage:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " % ";
+                result.setText(op);
+                break;
+            case R.id.btn_sin:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " Sin( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_cos:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " COS( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_tan:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " TAN( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_csc:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " CSC( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_sec:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " SEC( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_ctg:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " CTG( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_fact:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = " Factorial( " + result.getText().toString() + " ) ";
+                result.setText(op);
+                break;
+            case R.id.btn_raised:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + " ^ ";
+                result.setText(op);
+                break;
+            case R.id.btn_off:
+                finish();
+                break;
+            case R.id.btn_dot:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = result.getText().toString() + ".";
+                result.setText(op);
+                break;
+            case R.id.btn_parentesis:
+                op1 = Double.parseDouble(result.getText().toString());
+                op = "(" + result.getText().toString() + ")";
+                result.setText(op);
                 break;
         }
     }
