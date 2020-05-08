@@ -127,108 +127,167 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.setText(m.btn9(op));
                 break;
             case R.id.slash:
-                op1 = Double.parseDouble(result.getText().toString());
-                operacion = "/";
-                result.setText("");
+                try {
+                    op1 = Double.parseDouble(result.getText().toString());
+                    operacion = "/";
+                    result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
+
                 break;
             case R.id.btn_multiply:
-                op1 = Double.parseDouble(result.getText().toString());
-                operacion = "*";
-                result.setText("");
+                try {
+                    op1 = Double.parseDouble(result.getText().toString());
+                    operacion = "*";
+                    result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_clear:
+                try {
                 op1 = 0.0;
                 result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_delete:
+                try {
                 if (!result.getText().equals("")) {
                     op = result.getText().toString();
                     result.setText(op.substring(0, op.length() - 1));
                 }
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_plus:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 operacion = "+";
                 result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_less:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 operacion = "-";
                 result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_sqrt:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 operacion = "√";
                 op = " √( " + result.getText().toString() + " ) ";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_percentage:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 operacion = "%";
                 result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_sin:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " Sin( " + result.getText().toString() + " ) ";
                 operacion = "sin";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_cos:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " COS( " + result.getText().toString() + " ) ";
                 operacion = "cos";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_tan:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " TAN( " + result.getText().toString() + " ) ";
                 operacion = "tan";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_csc:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " CSC( " + result.getText().toString() + " ) ";
                 operacion = "csc";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_sec:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " SEC( " + result.getText().toString() + " ) ";
                 operacion = "sec";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_ctg:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " CTG( " + result.getText().toString() + " ) ";
                 operacion = "ctg";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_fact:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = " Factorial( " + result.getText().toString() + " ) ";
                 operacion = "factorial";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_raised:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 operacion = "pow";
                 result.setText("");
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_off:
+                try {
                 finish();
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_dot:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = result.getText().toString() + ".";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
             case R.id.btn_parentesis:
+                try {
                 op1 = Double.parseDouble(result.getText().toString());
                 op = "(" + result.getText().toString() + ")";
                 result.setText(op);
+                } catch (NumberFormatException nfe) {
+                }
                 break;
 
             case R.id.btn_equals:
+                try {
                 String pantalla2 = result.getText().toString();
                 if (operacion.equals("√") || operacion.equals("sin") || operacion.equals("cos") || operacion.equals("tan") ||
                         operacion.equals("csc") || operacion.equals("sec") || operacion.equals("ctg") || operacion.equals("factorial")) {
@@ -238,6 +297,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     op2 = Double.parseDouble(result.getText().toString()); // con este funciona las sumas y las restas
                     result.setText(m.evalua(op1, op2, operacion));
+                }
+                } catch (NumberFormatException nfe) {
                 }
                 break;
         }
