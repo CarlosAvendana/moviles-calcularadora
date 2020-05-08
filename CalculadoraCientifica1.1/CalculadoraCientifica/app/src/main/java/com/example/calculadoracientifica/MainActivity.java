@@ -230,14 +230,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_equals:
                 String pantalla2 = result.getText().toString();
-                if (pantalla2.equals("")) {
+                if (operacion.equals("√") || operacion.equals("sin") || operacion.equals("cos") || operacion.equals("tan") ||
+                        operacion.equals("csc") || operacion.equals("sec") || operacion.equals("ctg") || operacion.equals("factorial")) {
                     op2 = 0.0;
                     result.setText(m.evalua(op1, op2, operacion));
+
                 }else{
-                    op2 = Double.parseDouble(result.getText().toString());
+                    op2 = Double.parseDouble(result.getText().toString()); // con este funciona las sumas y las restas
                     result.setText(m.evalua(op1, op2, operacion));
                 }
-
                 break;
         }
     }

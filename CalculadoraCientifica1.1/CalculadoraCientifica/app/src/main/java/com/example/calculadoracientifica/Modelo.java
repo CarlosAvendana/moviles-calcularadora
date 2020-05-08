@@ -127,7 +127,6 @@ class Modelo {
             case "pow":
                 valor= Double.toString(elevado(num, num2));
             break;
-
         }
         return valor;
     }
