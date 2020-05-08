@@ -22,9 +22,10 @@ class Modelo {
     }
 
     public double factorial(double num) {
-        int i, fact = 1;
-        for (i = 1; i < (int) num; i++) {
-            fact = fact * i;
+        double fact = 1;
+        while ( num!=0) {
+            fact = fact * num;
+            num--;
         }
         return fact;
     }
